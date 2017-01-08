@@ -88,10 +88,10 @@ void readAir() {
 void readPH() {
 
 
-    delay_time=500;                            //Need to set the delay to 1.8 seconds when taking a reading
+    delay_time=1600;                            //Need to set the delay to 1.8 seconds when taking a reading
 
     Wire.beginTransmission(address);            //call the circuit by its ID number.
-    Wire.write("L,0");                   //transmit the command that was sent through the serial port.
+    Wire.write("r");                            //transmit the command that was sent through the serial port.
     Wire.endTransmission();                     //end the I2C data transmission.
 
     delay(delay_time);                          //wait the correct amount of time for the circuit to complete its instruction.
